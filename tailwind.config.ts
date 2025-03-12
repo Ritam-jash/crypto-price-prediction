@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,6 +58,8 @@ export default {
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-up": "slide-up 0.5s ease-out",
+        "star-movement-top": "star-movement-top 6s linear infinite",
+        "star-movement-bottom": "star-movement-bottom 6s linear infinite",
       },
       keyframes: {
         "fade-in": {
@@ -66,6 +69,14 @@ export default {
         "slide-up": {
           "0%": { transform: "translateY(10px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        "star-movement-top": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(500%)" },
+        },
+        "star-movement-bottom": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-500%)" },
         },
       },
     },
