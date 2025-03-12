@@ -53,7 +53,7 @@ const CryptoChart = () => {
       <div ref={chartRef} className={`h-[400px] w-full ${isFullScreen ? 'fullscreen-chart' : ''}`}>
         <TradingViewWidget
           symbol="BINANCE:BTCUSDT"
-          theme="dark"
+          theme="Dark"
           locale="en"
           autosize
           hide_side_toolbar={false}
