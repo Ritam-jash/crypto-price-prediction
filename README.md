@@ -1,1 +1,1 @@
-# Welcome to your Lovable Project!
+# Welcome to crypto-price-prediction Project!
