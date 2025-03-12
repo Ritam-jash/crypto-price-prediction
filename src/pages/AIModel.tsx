@@ -6,6 +6,10 @@ import { ArrowLeft, MailIcon } from "lucide-react";
 const AIModel = () => {
   const navigate = useNavigate();
 
+  const handleContactClick = () => {
+    window.location.href = "mailto:ritamjash8@gmail.com?subject=AI%20Model%20Early%20Access%20Request";
+  };
+
   return (
     <div className="min-h-screen bg-background p-8 flex flex-col items-center justify-center">
       <div className="glass-card p-8 max-w-2xl w-full animate-fade-in text-center">
@@ -33,7 +37,10 @@ const AIModel = () => {
           <p className="text-muted-foreground mb-6">
             Connect with our development team to explore partnership opportunities and gain exclusive early access to our advanced trading algorithms.
           </p>
-          <Button className="bg-primary hover:bg-primary/80 flex items-center gap-2">
+          <Button 
+            className="bg-primary hover:bg-primary/80 flex items-center gap-2"
+            onClick={handleContactClick}
+          >
             <MailIcon size={16} />
             Contact Development Team
           </Button>
