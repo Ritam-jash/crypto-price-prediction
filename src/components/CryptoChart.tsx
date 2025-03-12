@@ -1,5 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TradingViewWidget from 'react-tradingview-widget';
 import { StarBorder } from '@/components/ui/star-border';
 import { Maximize2, Minimize2 } from 'lucide-react';
@@ -7,6 +8,7 @@ import { Maximize2, Minimize2 } from 'lucide-react';
 const CryptoChart = () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const chartRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
@@ -33,6 +35,10 @@ const CryptoChart = () => {
     };
   }, []);
 
+  const handleAIModelClick = () => {
+    navigate('/ai-model');
+  };
+
   return (
     <div className="glass-card p-6 rounded-lg mb-8 animate-fade-in">
       <div className="flex items-center justify-between mb-6">
@@ -45,7 +51,7 @@ const CryptoChart = () => {
           >
             {isFullScreen ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
           </button>
-          <StarBorder color="#8989DE" className="cursor-pointer">
+          <StarBorder color="#8989DE" className="cursor-pointer" onClick={handleAIModelClick}>
             AI Price Prediction Model
           </StarBorder>
         </div>
